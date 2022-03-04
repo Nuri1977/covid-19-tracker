@@ -1,10 +1,14 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import CountriesContainer from './components/CountriesContainer';
+import RegionsContainer from './components/RegionsContainer';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<CountriesContainer />} />
+      <Route path="regions" element={<RegionsContainer />} />
+    </Routes>
   );
 }
 
