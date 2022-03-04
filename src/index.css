@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #272a31;
+  --secondary: #ec5242;
+  --terciary: #d3d3d3;
+  --brand: #d23228;
+  --success: #0d7d4d;
+  --info: #03c7e8;
+  --warning: #f0cc00;
+  --danger: #ab0d02;
+  --light: #f1ecea;
+  --dark: #00262b;
+  --white: #fff;
+  --lato-font: 'Lato', sans-serif;
+}
+
+body {
+  font-family: var(--lato-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
