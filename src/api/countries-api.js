@@ -1,4 +1,8 @@
-const url = 'https://api.covid19tracking.narrativa.com/api/2022-03-02';
+import transformDate from '../helpers/transformDate';
+
+const date = transformDate();
+
+const url = `https://api.covid19tracking.narrativa.com/api/${date}`;
 
 const handleError = (response) => {
   if (!response.ok) {
