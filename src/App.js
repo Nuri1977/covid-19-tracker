@@ -13,11 +13,11 @@ function App() {
     getCountries()(dispatch);
   }, []);
   return (
-    <div>
+    <div className="container">
       <Navigation />
       <Routes>
         <Route path="/" element={<CountriesContainer />} />
-        <Route path="/regions" element={<RegionsContainer />} />
+        <Route path="/:id" element={<RegionsContainer />} />
       </Routes>
     </div>
 

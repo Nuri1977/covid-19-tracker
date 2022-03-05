@@ -1,14 +1,32 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import store from '../redux/configureStore';
+import { useParams } from 'react-router-dom';
+import OneRegion from './OneRegion';
 
 function RegionsContainer() {
-  const test = useSelector((state) => state);
-  console.log(test);
-  console.log(store.getState());
+  const countries = useSelector((state) => state.countriesReducer);
+  const { id } = useParams();
+  let regions = [];
+  countries.forEach((country) => {
+    if (country.name === id) {
+      regions = country.regions;
+    }
+  });
+
+  console.log(regions);
 
   return (
-    <div>RegionsContainer</div>
+    <div>
+      <ul>
+        {regions.map(({ id, name }) => (
+          <OneRegion
+            key={id}
+            id={id}
+            name={name}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }
 
