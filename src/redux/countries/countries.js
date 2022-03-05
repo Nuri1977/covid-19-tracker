@@ -1,8 +1,5 @@
-/* eslint-disable camelcase */
 import fetchCountriesApi from '../../api/countries-api';
-import transformDate from '../../helpers/transformDate';
-
-const date = transformDate();
+import handleData from '../../helpers/handleData';
 
 const GET_COUNTRIES = 'bookStore/books/COUNTRIES';
 
@@ -15,19 +12,7 @@ export const setCounrties = (payload) => ({
 
 export const getCountries = () => async (dispatch) => {
   const dataResponse = await fetchCountriesApi();
-  const newData = dataResponse.dates[date].countries;
-  const obj = Object.entries(newData);
-  const resultArray = [];
-  for (let i = 0; i <= obj.length - 1; i += 1) {
-    const objdata = obj[i][1];
-    const {
-      id, name, regions, today_confirmed,
-    } = objdata;
-    resultArray.push({
-      id, name, regions, today_confirmed,
-    });
-  }
-
+  const resultArray = handleData(dataResponse);
   dispatch(setCounrties(resultArray));
 };
 
