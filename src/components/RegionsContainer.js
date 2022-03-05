@@ -1,14 +1,11 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getCountries } from '../redux/countries/countries';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import store from '../redux/configureStore';
 
 function RegionsContainer() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    getCountries()(dispatch);
-  }, []);
-  const countries = useSelector((state) => state.countriesReducer);
-  console.log(countries);
+  const test = useSelector((state) => state);
+  console.log(test);
+  console.log(store.getState());
 
   return (
     <div>RegionsContainer</div>
