@@ -7,9 +7,9 @@
 }
 
 :root {
-  --primary: #272a31;
-  --secondary: #ec5242;
-  --terciary: #d3d3d3;
+  --primary: #df407d;
+  --secondary: #c22f68;
+  --terciary: #fc5193;
   --brand: #d23228;
   --success: #0d7d4d;
   --info: #03c7e8;
@@ -23,6 +23,8 @@
 
 body {
   font-family: var(--lato-font);
+  background: var(--primary);
+  color: white;
 }
 
 ul {
@@ -31,9 +33,32 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .container {
   max-width: 1100px;
   margin: auto;
+  padding: 0 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.bg-primary {
+  background: var(--primary);
+}
+
+.bg-secondary {
+  background: var(--secondary);
 }
