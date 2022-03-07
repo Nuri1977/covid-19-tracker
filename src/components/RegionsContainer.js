@@ -51,19 +51,20 @@ function RegionsContainer() {
         </div>
       </div>
       <ul className="container ul-regions">
-        {regions.map(({
-          id, name, today_confirmed, today_deaths, today_open_cases, today_recovered,
-        }) => (
-          <OneRegion
-            key={id}
-            id={id}
-            name={name}
-            todayConfirmed={today_confirmed}
-            todayDeaths={today_deaths}
-            todayOpenCases={today_open_cases}
-            todayRecovered={today_recovered}
-          />
-        ))}
+        {regions.length === 0 ? (<h5>No data for regions </h5>)
+          : regions.map(({
+            id, name, today_confirmed, today_deaths, today_open_cases, today_recovered,
+          }) => (
+            <OneRegion
+              key={id}
+              id={id}
+              name={name}
+              todayConfirmed={today_confirmed}
+              todayDeaths={today_deaths}
+              todayOpenCases={today_open_cases}
+              todayRecovered={today_recovered}
+            />
+          ))}
       </ul>
     </div>
   );
