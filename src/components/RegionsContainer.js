@@ -21,9 +21,9 @@ function RegionsContainer() {
 
   return (
     <div>
-      <div className="container flex justify-between">
+      <div className="container flex justify-evenly">
         <div className="country-name">
-          <h5>{name}</h5>
+          <h3>{name}</h3>
         </div>
         <div className="country-stats">
           <h6>
