@@ -11,6 +11,10 @@ This is Microverse project for learning how to build React application, consumin
 - ReactJS
 - Redux and react-redux
 
+## Live Demo
+
+[Live Demo Link](https://angry-minsky-4e74f5.netlify.app)
+
 ## Installation
 
 Go to your terminal, navigate to your working directory and run
