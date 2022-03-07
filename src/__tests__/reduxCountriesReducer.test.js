@@ -1,4 +1,4 @@
-import countriesReducer, { setCounrties } from '../__mocks__/countries';
+import countriesReducer, { setCounrties } from '../redux/countries/countries';
 
 const initialState = [];
 describe('test redux', () => {

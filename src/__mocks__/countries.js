@@ -8,7 +8,7 @@ export const setCounrties = (payload) => ({
 });
 
 export const getCountries = () => async (dispatch) => {
-  const resultArray = [
+  const mockedArray = [
     {
       id: 'brazil',
       name: 'Brazil',
@@ -28,7 +28,7 @@ export const getCountries = () => async (dispatch) => {
       today_recovered: 40,
     },
   ];
-  dispatch(setCounrties(resultArray));
+  dispatch(setCounrties(mockedArray));
 };
 
 const countriesReducer = (state = initialState, action) => {

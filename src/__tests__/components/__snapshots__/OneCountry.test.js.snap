@@ -1,30 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Countries snapshot renders correctly 1`] = `
-<a
-  className=""
-  href="/undefined"
-  onClick={[Function]}
->
-  <li
-    className="card"
-  >
-    <div>
-      <img
-        alt="map"
-        className="map"
-        src="icons8-map-160.png"
-      />
-      <i
-        className="fa-regular fa-circle-right"
-      />
-    </div>
-    <h5 />
-    <h6 />
-  </li>
-</a>
-`;
-
 exports[`One Country snapshot renders correctly 1`] = `
 <a
   className=""
