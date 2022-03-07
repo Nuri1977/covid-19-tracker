@@ -1,28 +1,67 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import OneRegion from './OneRegion';
+import './RegionsContainer.css';
 
 function RegionsContainer() {
   const countries = useSelector((state) => state.countriesReducer);
   const { id } = useParams();
-  let regions = [];
-  countries.forEach((country) => {
-    if (country.name === id) {
-      regions = country.regions;
+  let country = [];
+  countries.forEach((element) => {
+    if (element.name === id) {
+      country = element;
     }
   });
 
-  console.log(regions);
+  console.log(country);
+  const {
+    name, regions, today_confirmed, today_deaths, today_open_cases, today_recovered,
+  } = country;
 
   return (
     <div>
-      <ul>
-        {regions.map(({ id, name }) => (
+      <div className="container flex justify-between">
+        <div className="country-name">
+          <h5>{name}</h5>
+        </div>
+        <div className="country-stats">
+          <h6>
+            <span>Confirmed: </span>
+            {today_confirmed}
+          </h6>
+          <h6>
+            <span>Deaths: </span>
+            {today_deaths}
+          </h6>
+          <h6>
+            <span>Open Cases: </span>
+            {today_open_cases}
+          </h6>
+          <h6>
+            <span>Recovered: </span>
+            {today_recovered}
+          </h6>
+        </div>
+      </div>
+      <div className="bg-secondary">
+        <div className="flex container stats justify-between">
+          <h5 className="title-stats">Stats by region</h5>
+        </div>
+      </div>
+      <ul className="container ul-regions">
+        {regions.map(({
+          id, name, today_confirmed, today_deaths, today_open_cases, today_recovered,
+        }) => (
           <OneRegion
             key={id}
             id={id}
             name={name}
+            todayConfirmed={today_confirmed}
+            todayDeaths={today_deaths}
+            todayOpenCases={today_open_cases}
+            todayRecovered={today_recovered}
           />
         ))}
       </ul>

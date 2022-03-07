@@ -1,26 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function OneRegion({ id, name }) {
+function OneRegion({
+  name, todayConfirmed, todayDeaths, todayOpenCases, todayRecovered,
+}) {
   return (
-    <li className="border">
-      <h3>
-        Region
-        {' '}
-        {id}
-      </h3>
-      <h3>
-        Name
-        {' '}
-        {name}
-      </h3>
+    <li className="flex justify-between striped">
+      <div className="region-name">
+        <h5>{name}</h5>
+      </div>
+      <div className="country-stats">
+        <h6>
+          <span>Confirmed: </span>
+          {todayConfirmed}
+        </h6>
+        <h6>
+          <span>Deaths: </span>
+          {todayDeaths}
+        </h6>
+        <h6>
+          <span>Open Cases: </span>
+          {todayOpenCases}
+        </h6>
+        <h6>
+          <span>Recovered: </span>
+          {todayRecovered}
+        </h6>
+      </div>
     </li>
   );
 }
 
 OneRegion.propTypes = {
-  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  todayConfirmed: PropTypes.number.isRequired,
+  todayDeaths: PropTypes.number.isRequired,
+  todayOpenCases: PropTypes.number.isRequired,
+  todayRecovered: PropTypes.number.isRequired,
 };
 
 export default OneRegion;

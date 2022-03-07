@@ -10,10 +10,10 @@ const handleData = (fetchedData) => {
   for (let i = 0; i <= obj.length - 1; i += 1) {
     const objdata = obj[i][1];
     const {
-      id, name, regions, today_confirmed,
+      id, name, regions, today_confirmed, today_deaths, today_open_cases, today_recovered,
     } = objdata;
     resultArray.push({
-      id, name, regions, today_confirmed,
+      id, name, regions, today_confirmed, today_deaths, today_open_cases, today_recovered,
     });
   }
   return resultArray;

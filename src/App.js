@@ -13,7 +13,7 @@ function App() {
     getCountries()(dispatch);
   }, []);
   return (
-    <div className="container">
+    <div>
       <Navigation />
       <Routes>
         <Route path="/" element={<CountriesContainer />} />

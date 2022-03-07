@@ -1,0 +1,48 @@
+.country-stats {
+  text-align: right;
+  padding: 5px;
+}
+
+.country-name {
+  text-align: center;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.ul-regions {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5px;
+}
+
+.region-name {
+  text-align: left;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.striped {
+  padding: 5px;
+  border: 1px solid var(--primary);
+}
+
+.striped:nth-child(odd) {
+  background: var(--terciary);
+}
+
+.striped:nth-child(even) {
+  background: var(--secondary);
+}
+
+/* ipad */
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .ul-regions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .ul-regions {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -2,8 +2,9 @@ const transformDate = () => {
   const date = new Date(); // M-D-YYYY
 
   const d = date.getDate();
-  const m = date.getMonth();
+  let m = date.getMonth();
   const y = date.getFullYear();
+  m += 1;
 
   const dateString = `${y}-${m <= 9 ? `0${m}` : m}-${(d <= 9 ? `0${d}` : d)}`;
   return dateString;
