@@ -15,7 +15,6 @@ function RegionsContainer() {
     }
   });
 
-  console.log(country);
   const {
     name, regions, today_confirmed, today_deaths, today_open_cases, today_recovered,
   } = country;

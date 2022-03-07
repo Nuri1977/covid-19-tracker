@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countries snapshot renders correctly 1`] = `
+<div>
+  <div
+    className="flex justify-evenly header-countries container"
+  >
+    <img
+      alt=""
+      className="world"
+      src="https://simplemaps.com/static/demos/resources/svg-library/svgs/world.svg"
+    />
+    <h1
+      className="title"
+    >
+      WORLD
+    </h1>
+  </div>
+  <div
+    className="bg-secondary"
+  >
+    <div
+      className="flex container stats justify-between"
+    >
+      <h5
+        className="title-stats"
+      >
+        Stats by country
+         
+        2022-03-07
+      </h5>
+      <input
+        className="search-input"
+        id="search"
+        name="search"
+        onChange={[Function]}
+        placeholder="Search Countries"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <ul
+    className="ul-grid container"
+  />
+</div>
+`;

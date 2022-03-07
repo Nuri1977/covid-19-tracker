@@ -1,6 +1,3 @@
-import fetchCountriesApi from '../../api/countries-api';
-import handleData from '../../helpers/handleData';
-
 export const GET_COUNTRIES = 'bookStore/books/COUNTRIES';
 
 const initialState = [];
@@ -11,8 +8,26 @@ export const setCounrties = (payload) => ({
 });
 
 export const getCountries = () => async (dispatch) => {
-  const dataResponse = await fetchCountriesApi();
-  const resultArray = handleData(dataResponse);
+  const resultArray = [
+    {
+      id: 'brazil',
+      name: 'Brazil',
+      regions: [],
+      today_confirmed: 35,
+      today_deaths: 38,
+      today_open_cases: 37,
+      today_recovered: 30,
+    },
+    {
+      id: 'germany',
+      name: 'Germany',
+      regions: [],
+      today_confirmed: 45,
+      today_deaths: 48,
+      today_open_cases: 47,
+      today_recovered: 40,
+    },
+  ];
   dispatch(setCounrties(resultArray));
 };
 
