@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import map from '../assets/images/icons8-map-160.png';
 import './OneCountry.css';
 
-function OneCountry({ name, todayConfirmed }) {
+function OneCountry({ name, today_confirmed }) {
   return (
     <NavLink to={`/${name}`}>
       <li className="card">
@@ -14,7 +14,7 @@ function OneCountry({ name, todayConfirmed }) {
           <i className="fa-regular fa-circle-right" />
         </div>
         <h5>{name}</h5>
-        <h6>{todayConfirmed}</h6>
+        <h6>{today_confirmed}</h6>
       </li>
     </NavLink>
   );
@@ -22,7 +22,7 @@ function OneCountry({ name, todayConfirmed }) {
 
 OneCountry.propTypes = {
   name: PropTypes.string.isRequired,
-  todayConfirmed: PropTypes.number.isRequired,
+  today_confirmed: PropTypes.number.isRequired,
 };
 
 export default OneCountry;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countries snapshot renders correctly 1`] = `
+<li
+  className="flex justify-between striped"
+>
+  <div
+    className="region-name"
+  >
+    <h5>
+      Germany
+    </h5>
+  </div>
+  <div
+    className="country-stats"
+  >
+    <h6>
+      <span>
+        Confirmed: 
+      </span>
+      56
+    </h6>
+    <h6>
+      <span>
+        Deaths: 
+      </span>
+      55
+    </h6>
+    <h6>
+      <span>
+        Open Cases: 
+      </span>
+      54
+    </h6>
+    <h6>
+      <span>
+        Recovered: 
+      </span>
+      53
+    </h6>
+  </div>
+</li>
+`;

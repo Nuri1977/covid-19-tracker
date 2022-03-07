@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CNavigation snapshot renders correctly 1`] = `
+<header
+  className="navbar bg-secondary"
+>
+  <ul
+    className="flex justify-between container"
+  >
+    <li>
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+      >
+        <i
+          className="fa-solid fa-angle-left"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+      >
+        Covid-19 Tracker
+      </a>
+    </li>
+    <li>
+      <i
+        className="fa-solid fa-microphone"
+      />
+      <i
+        className="fa-solid fa-gear"
+      />
+    </li>
+  </ul>
+</header>
+`;
